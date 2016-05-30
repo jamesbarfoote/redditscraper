@@ -28,7 +28,7 @@ for i in os.listdir(os.getcwd()):
 r = praw.Reddit('Simple reddit scraper for reddit')
 for i in range(len(reddits)):
     print (reddits[i])
-    for submission in r.get_subreddit(reddits[i]).get_new(limit=10):
+    for submission in r.get_subreddit(reddits[i]).get_new(limit=200):
             extension = submission.url[-4:]
             if os.path.isfile(path.basename(submission.url)) == False:
                         if extension == '.jpg' or extension == '.png' or extension == '.gif':
