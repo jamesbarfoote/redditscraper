@@ -33,10 +33,3 @@ for i in range(len(reddits)):
                         if extension == '.jpg' or extension == '.png' or extension == '.gif':
                                         print (submission.url)
                                         urllib.request.urlretrieve(submission.url, path.basename(submission.url))
-
-# for submission in r.get_subreddit('earthporn').get_new(limit=200):
-#     extension = submission.url[-4:]
-#     if os.path.isfile(path.basename(submission.url)) == False:
-#         if extension == '.jpg' or extension == '.png' or extension == '.gif':
-#             print (submission.url)
-#             urllib.request.urlretrieve(submission.url, path.basename(submission.url))
