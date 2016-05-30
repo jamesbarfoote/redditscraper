@@ -3,6 +3,11 @@ import os
 import urllib.request
 from os import path,system,getenv
 
+#check if the directory exists, if not then create it
+directory = 'wallpaper'
+if not os.path.exists(directory):
+    os.makedirs(directory)
+
 #change working directory
 os.chdir('wallpaper')
 
