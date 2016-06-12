@@ -32,5 +32,8 @@ for i in range(len(reddits)):
             extension = submission.url[-4:]
             if os.path.isfile(path.basename(submission.url)) == False:
                         if extension == '.jpg' or extension == '.png' or extension == '.gif':
-                                        print (submission.url)
-                                        urllib.request.urlretrieve(submission.url, path.basename(submission.url))
+                            print (submission.url)
+                            try:
+                                urllib.request.urlretrieve(submission.url, path.basename(submission.url))
+                            except urllib.error.HTTPError as err:
+                                print(err.code)
